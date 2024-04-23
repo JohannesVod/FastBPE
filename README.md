@@ -1,4 +1,4 @@
-# QuickBPE
+# FastBPE
 
 This is a much faster version of the MinBPE tokenizer from Andrej Karpathy. The main functions are optimized in C++ and then connected to Python using ctypes, so that you can call them conveniently. I already successfully tokenized the entire TinyStories dataset in around 8 minutes, which is ~3.5 GB of text. The main bottleneck is now the regex splitting, which is hard to optimize since I decided to keep it integrated into Python (so that it is still easy to change the split pattern).
 
